@@ -1,5 +1,161 @@
-#header {
-    background-color:red;
-    color:white;
-    text-align:center;
+/* resets */
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin:0;
+    padding:0;
+    background-color:azure;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+}
+
+/* Hero Assets */
+
+#hero {
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+    flex:1 1 800px;
+    background-color:black;
+    width:100%;
+    position:relative;
+        background-image:
+                linear-gradient(
+            to right,
+            rgba(0, 0, 0, 1) 10%,
+            rgba(0, 0, 0, 0.95) 40%,
+            rgba(0, 0, 0, 0.5) 70%,
+            transparent 90%),
+        url('../img/IMG_0080.jpeg');
+        background-size:1500px;
+        background-position:right;
+        background-repeat:no-repeat;
+
+
+
+}
+
+#top-bar {
+    box-sizing: border-box;
+    display:flex;
+    height:32px;
+    gap:100px;
+    justify-content:center;
+    align-items:center;
+    position:sticky;
+    top:5px;
+    background-color:rgba(20, 20, 20, 0.51);
+    z-index:10;
+}
+
+#hero .content{
+    width: 100%;
+    flex:1 0 500px;
+    display:flex;
+    margin-top:24px;
+    /* align-self:center; */
+
+
+    
+
+
+}
+
+#hero h1 {
+    flex:0 1 auto;
+    color:aquamarine;
+    font-size: clamp(4rem, 8vw, 8rem);
+    margin:0px;
+    padding-left:2rem;
+
+}
+#hero .links {
+    display:flex;
+    flex-direction:column;
+    gap:0.5rem;
+    padding:1rem;
+}
+
+#hero a,p {
+    color:azure;
+    margin:0px;
+    font-size:16px;
+}
+
+
+#hero .content .menu {
+    flex:0 1 50%;
+    justify-content:center;
+    align-items:center;
+    display:flex;
+    flex-direction:column;
+}
+
+
+#hero .content .img {
+    flex:0 1 50%;
+    justify-content:center;
+    align-items:center;
+    display:flex;
+
+
+}
+
+
+
+
+/* selected-work section assets */
+
+
+
+#selected-work {
+    flex:1 1 400px;
+    display:flex;
+    flex-direction: column;
+    background-color:black;
+    color:aliceblue; 
+}
+
+#selected-work .container {
+    flex:1 1 450px;
+    display:flex;
+    padding:50px;
+    gap:2rem;
+    overflow-x: scroll;
+}
+
+#selected-work .container article{
+    flex:1 1 400px;
+    width:400px;
+    display:flex;
+    flex-direction:column;
+    width:500px;
+}
+
+
+#selected-work article .image-placeholder {
+    flex:1 1 auto;
+    height:250px;
+    
+  
+}
+
+#selected-work article .image-placeholder  img{
+    flex:1 1 auto;
+    height:200px;
+  
+}
+
+
+/* about-me section assets */
+
+
+#about-me{
+    flex:1 1 500px;
+    color:aliceblue;
+    background-color:#7928CA;
 }
