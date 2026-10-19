@@ -1,6 +1,15 @@
 /* resets */
 * {
     box-sizing: border-box;
+    a,p {
+        color:azure;
+        margin:0px;
+        font-size:10px;
+
+    }
+    h2,h4{
+        color:aliceblue;
+    }
 
 }
 
@@ -11,7 +20,10 @@ body {
     display:flex;
     flex-direction:column;
     position:relative;
+    background-color:black;
+    
 }
+
 
 /* Hero Assets */
 
@@ -19,7 +31,7 @@ body {
     box-sizing:border-box;
     display:flex;
     flex-direction:column;
-    flex:1 1 800px;
+    flex:1 1 750px;
     background-color:black;
     width:100%;
     position:relative;
@@ -39,6 +51,7 @@ body {
 
 }
 
+    
 #top-bar {
     box-sizing: border-box;
     display:flex;
@@ -50,15 +63,21 @@ body {
     top:5px;
     background-color:rgba(20, 20, 20, 0.51);
     z-index:10;
+
+}
+
+#hero #top-bar a {
+    color:rgba(146, 146, 146, 0.868);
+    text-decoration:none;
 }
 
 #hero .content{
     width: 100%;
-    flex:1 0 500px;
+    flex:1 1 500px;
     display:flex;
     margin-top:24px;
     /* align-self:center; */
-
+    
 
     
 
@@ -68,7 +87,7 @@ body {
 #hero h1 {
     flex:0 1 auto;
     color:aquamarine;
-    font-size: clamp(4rem, 8vw, 8rem);
+    font-size: clamp(2rem, 4vw, 6rem);
     margin:0px;
     padding-left:2rem;
 
@@ -77,22 +96,26 @@ body {
     display:flex;
     flex-direction:column;
     gap:0.5rem;
-    padding:1rem;
+    padding:2rem;
 }
 
 #hero a,p {
     color:azure;
     margin:0px;
-    font-size:16px;
+    font-size:16px; 
 }
 
 
 #hero .content .menu {
     flex:0 1 50%;
     justify-content:center;
-    align-items:center;
+    align-items:flex-start;
     display:flex;
     flex-direction:column;
+    padding-left:14rem;
+    p{
+        text-align: justify;
+    }
 }
 
 
@@ -105,8 +128,64 @@ body {
 
 }
 
+/* explore my worlds section assets */
 
+#explore-my-worlds{
+    flex:1 1 450px;
+    display:flex;
+    flex-direction:column;
+    margin-top:50px;
+    
+}
 
+#explore-my-worlds .header{
+    padding-left:32px;
+    h2{
+        font-size:32px;
+        margin:0;
+        color:aquamarine;
+    }
+    p{
+        margin-bottom:48px;
+    }
+}
+
+#explore-my-worlds .container {
+    flex:1 1 400px;
+    display:flex;   
+    margin:16px;
+    gap:24px;
+    justify-content:center;
+    p{
+        font-size:14px;
+        text-align: justify;
+    }
+}
+
+#explore-my-worlds .container article{
+    display:flex;
+    flex-direction:column;
+    height: 250px;
+    flex:0 1 300px;
+    background-color:rgba(11, 11, 47, 0.566);
+    padding:24px;
+    border-radius:16px;
+    box-shadow: 5px 5px 5px  rgba(127, 255, 212, 0.592) ;
+
+    header{
+        
+        margin-top:16px;
+        h4{
+            margin:0px;
+            font-size:24px;
+        }
+        }
+}
+
+#explore-my-worlds .container article .content{
+    margin-top:24px;
+
+}
 
 /* selected-work section assets */
 
@@ -118,6 +197,17 @@ body {
     flex-direction: column;
     background-color:black;
     color:aliceblue; 
+    header{
+    padding-left:32px;
+    h2{
+        font-size:32px;
+        margin:0;
+        color:aquamarine;
+    }
+    p{
+        margin-bottom:48px;
+    }
+    }
 }
 
 #selected-work .container {
@@ -133,7 +223,11 @@ body {
     width:400px;
     display:flex;
     flex-direction:column;
-    width:500px;
+
+    h4{
+        font-size:18px;
+        color:rgb(175, 171, 171);
+    }
 }
 
 
@@ -147,7 +241,12 @@ body {
 #selected-work article .image-placeholder  img{
     flex:1 1 auto;
     height:200px;
+    border-radius: 30px;;
   
+}
+
+.container::-webkit-scrollbar {
+  display: none;
 }
 
 
@@ -157,5 +256,55 @@ body {
 #about-me{
     flex:1 1 500px;
     color:aliceblue;
-    background-color:#7928CA;
+    background-color:#4e4e4e;
+}
+
+
+
+
+
+
+/* Footer section assets */
+
+footer {
+    display:flex;
+    flex-direction:column;   
+    padding:24px;
+}
+
+footer .info{
+    display:flex;
+    h4{
+        color:rgba(148, 148, 148, 0.741);
+        font-size:16px;
+    }
+    p{
+        font-size:14px;
+        color:rgba(148, 148, 148, 0.741);        
+    }
+    gap:32px;
+}
+
+
+
+footer .info .overview{
+    flex:0 1 50%;
+}
+
+footer .info .disciplines{
+    flex:1 1 20%;
+    display:flex;
+    flex-direction:column;
+    
+    div{
+        display:flex;
+        gap:5px;
+
+    }
+}
+
+footer .info .contact{
+    flex:1 1 20%;
+    display:flex;
+    flex-direction:column;
 }
