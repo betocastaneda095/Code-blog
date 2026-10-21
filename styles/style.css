@@ -19,7 +19,7 @@ body {
     background-color:azure;
     display:flex;
     flex-direction:column;
-    position:relative;
+    /* position:relative; */
     background-color:black;
     
 }
@@ -31,7 +31,7 @@ body {
     box-sizing:border-box;
     display:flex;
     flex-direction:column;
-    flex:1 1 750px;
+    flex:0 1 750px;
     background-color:black;
     width:100%;
     position:relative;
@@ -64,6 +64,10 @@ body {
     background-color:rgba(20, 20, 20, 0.51);
     z-index:10;
 
+}
+
+.menu-toggle {
+    display: none;
 }
 
 #hero #top-bar a {
@@ -307,4 +311,107 @@ footer .info .contact{
     flex:1 1 20%;
     display:flex;
     flex-direction:column;
+}
+
+
+
+
+
+
+/* MEDIA DEVICES ASSETS */
+
+@media (max-width:768px) {
+
+body{
+    width:100%;
+
+}    
+
+#top-bar {
+    position:fixed;
+    flex-direction:column;
+    height:300px;
+    width: 150px;
+    background-color:rgba(20, 20, 20, 0.808);    
+    gap: clamp(1rem, 5vw, 2rem);
+    padding:16px;
+    align-items:flex-start;
+
+    display:none;
+
+
+    button{
+        background-color:rgba(255, 255, 255, 0);
+        color:rgba(203, 203, 203, 0.934);
+        border-style:none;
+        
+    }
+        .menu-toggle {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}
+
+
+#hero{
+        flex:0 1 500px;
+        flex-direction:column;
+        background-image:
+                    linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0.90) 0%,
+                rgba(0, 0, 0, 0.85) 20%,
+                rgba(0, 0, 0, 0.5) 60%,
+                transparent 90%),
+                                 linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.90) 0%,
+                rgba(0, 0, 0, 0.30) 20%,
+                rgba(0, 0, 0, 0.0) 40%,
+                transparent 90%),
+            url('../img/IMG_0080.jpeg');    
+            background-size:1500px;
+            background-position:center;
+            background-repeat:no-repeat;
+}
+
+
+
+#hero .content {
+    flex-direction:column;
+    height:450px;
+    margin:0;
+
+        .menu{
+            flex:1 1 auto;
+            height:500px;
+            margin:0px;
+            padding:0px;
+            h1{
+                font-size:48px;
+            }
+            .lema{
+                font-size:20px;
+                font-width:bold;
+            }
+        }
+
+        .img{   
+            flex:1 1 auto;
+            height:50px;
+        }    
+
+    }
+
+    #explore-my-worlds .container{
+    overflow-x: hidden;
+
+    flex-direction:column;
+}
+
+footer .info {
+    flex-direction:column;
+}
+
 }
