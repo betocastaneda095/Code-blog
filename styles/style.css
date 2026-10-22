@@ -382,6 +382,7 @@ body{
     flex-direction:column;
     height:450px;
     margin:0;
+    padding-top:24px;
 
         .menu{
             flex:1 1 auto;
@@ -392,8 +393,13 @@ body{
                 font-size:48px;
             }
             .lema{
-                font-size:20px;
-                font-width:bold;
+                font-size:24px;
+                font-width:30px;
+                margin-left:32px;
+                padding-right:24px;
+            }
+            .description{
+                
             }
         }
 
