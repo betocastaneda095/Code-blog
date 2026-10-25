@@ -1,27 +1,58 @@
 /* resets */
+
+
+:root{
+    --primary-color:aquamarine;
+    --secondary-color:azure;
+    --terciary-text-color:rgba(146, 146, 146, 0.868);
+    --card-background-color: ;
+    --card-background-color-secondary:rgb(34, 34, 34);
+    --header-font-size: ;
+    --menu-background-color:rgba(20, 20, 20, 0.51);
+    
+}
+
 * {
     box-sizing: border-box;
     a,p {
         color:azure;
         margin:0px;
-        font-size:10px;
-
+        font-size:16px;
+        text-align:justify;
     }
     h2,h4{
         color:aliceblue;
     }
-
 }
 
 body {
     margin:0;
     padding:0;
-    background-color:azure;
     display:flex;
     flex-direction:column;
-    /* position:relative; */
     background-color:black;
-    
+}
+
+#top-bar {
+    box-sizing: border-box;
+    display:flex;
+    height:32px;
+    gap:100px;
+    justify-content:center;
+    align-items:center;
+    position:sticky;
+    top:5px;
+    background-color:var(--menu-background-color);
+    z-index:10;
+
+    >a {color:var(--terciary-text-color);
+    text-decoration:none;
+    font-size: 1rem;
+    }
+
+    .menu-toggle {
+    display: none;
+    }
 }
 
 
@@ -46,33 +77,6 @@ body {
         background-size:1500px;
         background-position:right;
         background-repeat:no-rerpeat;
-
-
-
-}
-
-    
-#top-bar {
-    box-sizing: border-box;
-    display:flex;
-    height:32px;
-    gap:100px;
-    justify-content:center;
-    align-items:center;
-    position:sticky;
-    top:5px;
-    background-color:rgba(20, 20, 20, 0.51);
-    z-index:10;
-
-}
-
-.menu-toggle {
-    display: none;
-}
-
-#hero #top-bar a {
-    color:rgba(146, 146, 146, 0.868);
-    text-decoration:none;
 }
 
 #hero .content{
@@ -80,56 +84,35 @@ body {
     flex:1 1 500px;
     display:flex;
     margin-top:24px;
-    /* align-self:center; */
-    
 
-    
-
-
-}
-
-#hero h1 {
+    h1 {
     flex:0 1 auto;
-    color:aquamarine;
-    font-size: clamp(2rem, 4vw, 6rem);
+    color:var(--primary-color);
+    font-size: clamp(4rem, 4vw, 8rem);
     margin:0px;
-    padding-left:2rem;
+    padding-left:1rem;
+    }
 
-}
-#hero .links {
-    display:flex;
-    flex-direction:column;
-    gap:0.5rem;
-    padding:2rem;
-}
-
-#hero a,p {
-    color:azure;
-    margin:0px;
-    font-size:16px; 
-}
-
-
-#hero .content .menu {
+    .text-container {
     flex:0 1 50%;
     justify-content:center;
     align-items:flex-start;
     display:flex;
     flex-direction:column;
-    padding-left:14rem;
-    p{
-        text-align: justify;
+    padding-left:6rem;
+        >p{
+            font-size:1.5rem;
+            padding:0 0 0 1rem;
+        }
+        
+        .hero-text {
+        display:flex;
+        flex-direction:column;
+        gap:0.5rem;
+        padding:1rem 0 0 1rem;
+        
+        }
     }
-}
-
-
-#hero .content .img {
-    flex:0 1 50%;
-    justify-content:center;
-    align-items:center;
-    display:flex;
-
-
 }
 
 /* explore my worlds section assets */
@@ -324,7 +307,6 @@ footer .info .contact{
 
 body{
     width:100%;
-
 }    
 
 #top-bar {
@@ -338,7 +320,6 @@ body{
     align-items:flex-start;
 
     display:none;
-
 
     button{
         background-color:rgba(255, 255, 255, 0);
@@ -357,94 +338,105 @@ body{
 #hero{
         flex:0 1 500px;
         flex-direction:column;
-        background-image:
-                    linear-gradient(
+        background-image: 
+                     linear-gradient(
                 to bottom,
                 rgba(0, 0, 0, 0.90) 0%,
-                rgba(0, 0, 0, 0.85) 20%,
-                rgba(0, 0, 0, 0.5) 60%,
+                rgba(0, 0, 0, 0.85) 50%,
+                rgba(0, 0, 0, 0.5) 70%,
                 transparent 90%),
                                  linear-gradient(
                 to top,
                 rgba(0, 0, 0, 0.90) 0%,
-                rgba(0, 0, 0, 0.30) 20%,
-                rgba(0, 0, 0, 0.0) 40%,
+                rgba(0, 0, 0, 0.30) 40%,
+                rgba(0, 0, 0, 0.0) 50%,
                 transparent 90%),
             url('../img/IMG_0080.jpeg');    
             background-size:1500px;
-            background-position:center;
-            background-repeat:no-repeat;
+            background-position:right;
+            background-repeat:no-repeat; 
 }
-
-
 
 #hero .content {
     flex-direction:column;
-    height:450px;
+    height:80vh;
     margin:0;
     padding-top:100px;
 
-
-        .menu{
+        .text-container{
             flex:1 1 auto;
             height:500px;
             margin:0px;
-            padding:0px;
-            h1{
-                font-size:48px;
-            }
-            .lema{
+            padding:2rem;
+
+            .quote{
                 font-size:24px;
                 font-width:30px;
-                margin-left:32px;
-                padding-right:24px;
+            }
+            .hero-text{
+                padding: 0 3rem 0 1rem;
+
+                .description{
+                    margin-top:3rem;
+                }
             }
 
-            
-            .description{
-                margin-top:32px;
-            }
         }
-
+        
         .img{   
             flex:1 1 auto;
             height:50px;
         }    
+}
 
+
+/* explore-my-worlds mobile assets */
+
+
+    #explore-my-worlds{
+        margin-bottom:12rem;
     }
 
     #explore-my-worlds .container{
     flex-direction:column;
+    gap:150px;
+    
+
 
 }
 
     #explore-my-worlds .container article{
-    background-color:rgb(34, 34, 34);
+    /* background-color:var(--card-background-color-secondary); */
     padding:24px;
     border-radius:5px;
     box-shadow:none ;
 
         header{
             p {
-                color:aquamarine;
+                color:var(--primary-color); 
             }
+            
         }
         .content{
+            display:flex;
+            overflow:visible;
+            flex-direction:column;
+            align-items: center;
+            
             p{
                 color:#cfcece;
+                font-size:1rem;
+
             }
         }
 
-        footer{
-            p{
-            color:aquamarine;
-            font-size:10px;
-            }
+        .content >svg { 
+            height:250px;
+            width:250px;
         }
     }
 
 footer .info {
     flex-direction:column;
 }
-
 }
