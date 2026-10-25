@@ -45,7 +45,7 @@ body {
         url('../img/IMG_0080.jpeg');
         background-size:1500px;
         background-position:right;
-        background-repeat:no-repeat;
+        background-repeat:no-rerpeat;
 
 
 
@@ -382,7 +382,8 @@ body{
     flex-direction:column;
     height:450px;
     margin:0;
-    padding-top:24px;
+    padding-top:100px;
+
 
         .menu{
             flex:1 1 auto;
@@ -398,8 +399,10 @@ body{
                 margin-left:32px;
                 padding-right:24px;
             }
+
+            
             .description{
-                
+                margin-top:32px;
             }
         }
 
@@ -411,10 +414,34 @@ body{
     }
 
     #explore-my-worlds .container{
-    overflow-x: hidden;
-
     flex-direction:column;
+
 }
+
+    #explore-my-worlds .container article{
+    background-color:rgb(34, 34, 34);
+    padding:24px;
+    border-radius:5px;
+    box-shadow:none ;
+
+        header{
+            p {
+                color:aquamarine;
+            }
+        }
+        .content{
+            p{
+                color:#cfcece;
+            }
+        }
+
+        footer{
+            p{
+            color:aquamarine;
+            font-size:10px;
+            }
+        }
+    }
 
 footer .info {
     flex-direction:column;
