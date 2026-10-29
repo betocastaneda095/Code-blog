@@ -9,6 +9,12 @@
     --card-background-color-secondary:rgb(34, 34, 34);
     --header-font-size: ;
     --menu-background-color:rgba(20, 20, 20, 0.51);
+    --menu-background-color-mobile:rgba(79, 77, 77, 0.936);
+    --hover-color:rgb(255, 255, 255);
+
+    --hover-font-size:18px;
+    --header-box-shadow:0px 1px 0px 1px rgb(39, 39, 39);
+
     
 }
 
@@ -33,14 +39,22 @@ body {
     background-color:black;
 }
 
+.menu-toggle{
+    display:none;
+}
+
 #top-bar {
     box-sizing: border-box;
     display:flex;
-    height:32px;
+    height:4rem;
+    width:90vw;
+    align-self:center;
+    border-radius:25px;
+    box-shadow: 0px 1px 0px 1px rgb(39, 39, 39);
     gap:100px;
     justify-content:center;
     align-items:center;
-    position:sticky;
+    position:fixed;
     top:5px;
     background-color:var(--menu-background-color);
     z-index:10;
@@ -48,6 +62,10 @@ body {
     >a {color:var(--terciary-text-color);
     text-decoration:none;
     font-size: 1rem;
+    &:hover{
+        color:var(--hover-color);
+        font-size:var(--hover-font-size);
+    }
     }
 
     .menu-toggle {
@@ -74,9 +92,9 @@ body {
             rgba(0, 0, 0, 0.5) 70%,
             transparent 90%),
         url('../img/IMG_0080.jpeg');
-        background-size:1500px;
-        background-position:right;
-        background-repeat:no-rerpeat;
+        background-size:100% 100%, 1500px;
+        background-position:center, right;
+        background-repeat:no-repeat, no-repeat;
 }
 
 #hero .content{
@@ -118,31 +136,39 @@ body {
 /* explore my worlds section assets */
 
 #explore-my-worlds{
-    flex:1 1 450px;
+    flex:1 1 100vh;
+    
     display:flex;
     flex-direction:column;
     margin-top:50px;
+    padding:10vh 0 0 0;
     
 }
 
 #explore-my-worlds .header{
     padding-left:32px;
+    background-color:var(--menu-background-color);
+    padding:32px 32px;
+    margin:3rem 0;
+    box-shadow:var(--header-box-shadow);
     h2{
         font-size:32px;
         margin:0;
-        color:aquamarine;
+        color:var(--primary-color);
+        
     }
     p{
-        margin-bottom:48px;
+    
     }
 }
 
 #explore-my-worlds .container {
-    flex:1 1 400px;
+    flex:1 1 auto;
     display:flex;   
     margin:16px;
     gap:24px;
-    justify-content:center;
+    /* justify-content:center; */
+    flex-wrap:wrap;
     p{
         font-size:14px;
         text-align: justify;
@@ -152,13 +178,14 @@ body {
 #explore-my-worlds .container article{
     display:flex;
     flex-direction:column;
-    height: 250px;
-    flex:0 1 300px;
+  
+    height: 200px;
+    flex:0 0 250px;
     background-color:rgba(11, 11, 47, 0.566);
     padding:24px;
     border-radius:16px;
     box-shadow: 5px 5px 5px  rgba(127, 255, 212, 0.592) ;
-
+    margin-bottom:150px;
     header{
         
         margin-top:16px;
@@ -167,6 +194,10 @@ body {
             font-size:24px;
         }
         }
+    svg{
+        height:200px;
+        width:200px;
+    }    
 }
 
 #explore-my-worlds .container article .content{
@@ -186,16 +217,17 @@ body {
     color:aliceblue; 
     header{
     padding-left:32px;
+    background-color:var(--menu-background-color);
+    padding:32px 32px;
+    margin:3rem 0;
+    box-shadow:var(--header-box-shadow);
     h2{
         font-size:32px;
         margin:0;
-        color:aquamarine;
-    }
-    p{
-        margin-bottom:48px;
+        color:var(--primary-color);
     }
     }
-}
+}    
 
 #selected-work .container {
     flex:1 1 450px;
@@ -257,6 +289,9 @@ footer {
     display:flex;
     flex-direction:column;   
     padding:24px;
+    .copyright p{
+        color:rgba(148, 148, 148, 0.741);
+    }
 }
 
 footer .info{
@@ -303,40 +338,52 @@ footer .info .contact{
 
 /* MEDIA DEVICES ASSETS */
 
+
+
 @media (max-width:768px) {
 
 body{
     width:100%;
 }    
 
+.menu-toggle{
+    display:block;
+    position:fixed;
+    z-index:11;
+    background-color:var(--menu-background-color-mobile);
+    border-style:none;
+    top: 20px;
+    left:20px;
+    width:40px;
+    height:40px;
+    border-radius:0.5rem 0 0 0;
+}
+
 #top-bar {
     position:fixed;
     flex-direction:column;
-    height:300px;
-    width: 150px;
-    background-color:rgba(20, 20, 20, 0.808);    
+    height:50vh;
+    width: 90vw;
+    margin:15px 0 0 -4;
+    background-color:var(--menu-background-color-mobile);    
     gap: clamp(1rem, 5vw, 2rem);
     padding:16px;
     align-items:flex-start;
-
-    display:none;
-
-    button{
-        background-color:rgba(255, 255, 255, 0);
-        color:rgba(203, 203, 203, 0.934);
-        border-style:none;
-        
+    a{
+        font-size:2.5rem;
     }
-        .menu-toggle {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
+    display:none; 
+
     }
+
+
+#top-bar.open{
+    display:flex;
 }
 
 
 #hero{
-        flex:0 1 500px;
+        flex:0 1 70vh;
         flex-direction:column;
         background-image: 
                      linear-gradient(
@@ -359,15 +406,15 @@ body{
 
 #hero .content {
     flex-direction:column;
-    height:80vh;
+    height:100%;
     margin:0;
-    padding-top:100px;
+    padding-top:10%;
 
         .text-container{
             flex:1 1 auto;
-            height:500px;
+            height:90%;
             margin:0px;
-            padding:2rem;
+            padding:3rem 2rem 1rem 2rem;
 
             .quote{
                 font-size:24px;
@@ -377,7 +424,7 @@ body{
                 padding: 0 3rem 0 1rem;
 
                 .description{
-                    margin-top:3rem;
+                    margin-top:2rem;
                 }
             }
 
@@ -385,7 +432,7 @@ body{
         
         .img{   
             flex:1 1 auto;
-            height:50px;
+            height:10%;
         }    
 }
 
@@ -395,23 +442,31 @@ body{
 
     #explore-my-worlds{
         margin-bottom:12rem;
+        margin-top:0;
+        padding-top:0;
+        .header{
+        margin-bottom:7rem;
+        }
     }
 
     #explore-my-worlds .container{
     flex-direction:column;
-    gap:150px;
-    
-
-
+    gap:75px;
+    margin-top:0;    
 }
 
     #explore-my-worlds .container article{
     /* background-color:var(--card-background-color-secondary); */
+    flex:1 1 30vh;
     padding:24px;
     border-radius:5px;
     box-shadow:none ;
+    margin:20px 0 20px 0;
+    
 
-        header{
+        >header{
+            background-color:var();
+            align-self:center;
             p {
                 color:var(--primary-color); 
             }
@@ -431,8 +486,8 @@ body{
         }
 
         .content >svg { 
-            height:250px;
-            width:250px;
+            height:150px;
+            width:150px;
         }
     }
 
