@@ -62,10 +62,13 @@ body {
     >a {color:var(--terciary-text-color);
     text-decoration:none;
     font-size: 1rem;
+    @media (hover : hover){
     &:hover{
         color:var(--hover-color);
         font-size:var(--hover-font-size);
     }
+    }
+
     }
 
     .menu-toggle {
@@ -339,7 +342,11 @@ footer .info .contact{
 /* MEDIA DEVICES ASSETS */
 
 
+@media (hover : hover){
+    #top-bar a{
 
+    }
+}
 @media (max-width:768px) {
 
 body{
@@ -349,8 +356,10 @@ body{
 .menu-toggle{
     display:block;
     position:fixed;
+    color:var(--secondary-color);
     z-index:11;
-    background-color:var(--menu-background-color-mobile);
+    background:none;
+    /* background-color:var(--menu-background-color-mobile); */
     border-style:none;
     top: 20px;
     left:20px;
@@ -414,14 +423,14 @@ body{
             flex:1 1 auto;
             height:90%;
             margin:0px;
-            padding:3rem 2rem 1rem 2rem;
+            padding:3rem 1rem 1rem 1rem;
 
             .quote{
-                font-size:24px;
+                font-size:clamp(20px, 5.5vw, 32px);
                 font-width:30px;
             }
             .hero-text{
-                padding: 0 3rem 0 1rem;
+                padding: 0 1rem 0 1rem;
 
                 .description{
                     margin-top:2rem;
