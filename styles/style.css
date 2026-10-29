@@ -6,7 +6,7 @@
     --secondary-color:azure;
     --terciary-text-color:rgba(146, 146, 146, 0.868);
     --card-background-color: ;
-    --card-background-color-secondary:rgb(34, 34, 34);
+    --card-background-color-secondary:rgba(7, 10, 34, 0.969);
     --header-font-size: ;
     --menu-background-color:rgba(20, 20, 20, 0.51);
     --menu-background-color-mobile:rgba(79, 77, 77, 0.936);
@@ -462,15 +462,20 @@ body{
     flex-direction:column;
     gap:75px;
     margin-top:0;    
+    position:relative;
 }
 
     #explore-my-worlds .container article{
-    /* background-color:var(--card-background-color-secondary); */
+    background-color:var(--card-background-color-secondary);
     flex:1 1 30vh;
     padding:24px;
     border-radius:5px;
-    box-shadow:none ;
+    box-shadow:var(--header-box-shadow);
+    border-style:solid;
+    border-width: 0.5px;
     margin:20px 0 20px 0;
+    position:sticky;
+    top:1rem;
     
 
         >header{
